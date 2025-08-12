@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations! Welcome to Our Computer Class</title>
+    <meta name="description" content="Demonstration of HTML5 lists, tables, media, and advanced forms with native validation.">
+</head>
+<body>
+    <header>
+        <h1>Congratulations! Welcome to Our Computer Class</h1>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="#lists">Programming Languages Lists</a></li>
+                <li><a href="#table">Student Marks Table</a></li>
+                <li><a href="#media">Media</a></li>
+                <li><a href="#form">Form</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Lists Section -->
+        <section id="lists">
+            <h2>Here are some of most Favorite Programming Languages</h2>
+            <ol>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>Java</li>
+                <li>C#</li>
+                <li>Go</li>
+            </ol>
+            <h3>Here We go!  The Top Web Development Skills</h3>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Accessibility</li>
+                <li>SEO</li>
+                <li>Responsive Design</li>
+            </ul>
+        </section>
+
+        <!-- Table Section -->
+        <section id="table">
+            <h2>Student Grades</h2>
+            <table border="1" aria-label="Student Grades Table">
+                <caption>Student Grades for Web Development Course</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Student Name</th>
+                        <th scope="col">Assignment</th>
+                        <th scope="col">Grade</th>
+                        <th scope="col">Comments</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Alice Auma</td>
+                        <td>HTML Basics</td>
+                        <td>A</td>
+                        <td>Great job on the assignment!</td>
+                    </tr>
+                    <tr>
+                        <td>John Kamau</td>
+                        <td>Accessibility</td>
+                        <td>B+</td>
+                        <td>Good understanding of concepts.</td>
+                    </tr>
+                    <tr>
+                        <td>James Macharia</td>
+                        <td>SEO</td>
+                        <td>A-</td>
+                        <td>Well done, but could improve on keyword usage.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Media Section -->
+        <section id="media">
+            <h2>Media Content</h2>
+            <figure>
+                <img src="webdev.jpg" alt="Illustration of web development" width="300">
+                <figcaption>Web Development Tutorial</figcaption>
+            </figure>
+            <figure>
+                <audio controls>
+                    <source src="song.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <figcaption>Sample Audio: Background Music</figcaption>
+            </figure>
+            <figure>
+                <video controls width="320">
+                    <source src="sample-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <figcaption> Video: HTML5 Tutorial</figcaption>
+            </figure>
+        </section>
+
+        <!-- Form Section -->
+        <section id="form">
+            <h2>Registration Form</h2>
+            <p>Please fill out the form below to register for the course. All fields are required.</p>
+            <form action="#" method="post" autocomplete="on">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Your full name" required minlength="3" autocomplete="name"><br><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="sample@email.com" required autocomplete="email"><br><br>
+
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" min="16" max="120" required><br><br>
+
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required><br><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Account Details</legend>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required pattern="^[a-zA-Z0-9_]{5,15}$" title="5-15 characters, letters, numbers, or underscores"><br><br>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required minlength="6" maxlength="20" placeholder="6-20 characters"><br><br>
+
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required minlength="6" maxlength="20" placeholder="Re-enter password"><br><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preferences</legend>
+                    <label>Gender:</label>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label><br><br>
+                    <label for="language">Preferred Language:</label>
+                    <select id="language" name="language" required>
+                        <option value="">Select Language</option>
+                        <option value="english">English</option>
+                        <option value="swahili">Swahili</option>
+                        <option value="french">French</option>
+                        <option value="spanish">Spanish</option>
+                    </select><br><br>
+
+                    <label for="country">Country:</label>
+                    <select id="country" name="country" required>
+                        <option value="">Select Country</option>
+                        <option value="kenya">Kenya</option>
+                        <option value="usa">USA</option>
+                        <option value="uk">UK</option>
+                        <option value="india">India</option>
+                    </select><br><br>
+
+                    <label for="bio">Short Bio:</label>
+                    <textarea id="bio" name="bio" rows="3" cols="30" maxlength="200" placeholder="Tell us about yourself"></textarea><br><br>
+
+                    <label>
+                        <input type="checkbox" name="terms" required>
+                        I agree to the terms and conditions
+                    </label>
+                </fieldset>
+
+                <button type="submit">Register</button>
+                <button type="reset">Reset</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 All Rights Reserved.</p>
+        <p>Created by: Pat Kimathi</p>
+        <p>Contact: <a href="mailto:patkimathi148@gmail.com">patkimathi8@gmail.com</a></p>
